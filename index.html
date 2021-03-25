@@ -40,13 +40,11 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function draw_b() {
-  var b_canvas = document.getElementById("b");
+  var b_canvas = document.getElementById("myCanvas");
   var b_context = b_canvas.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
 	
-	
-
 </script>
 	
 <style>	
@@ -67,6 +65,7 @@ function draw_b() {
     left: 0vw;
     z-index: 1;
 }
+	
 </style>
 
 <body>
@@ -83,6 +82,11 @@ function draw_b() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+	
+	
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
