@@ -46,11 +46,10 @@ function draw_b() {
 }
 
 function draw_text(){
-	var c_canvas = document.getElementById("myCanvas");
-	var c_context = c_canvas.getContext("2d");
-	context.font = "bold 12px Arial";
-	context.fillText("Hansi",10,50);
-	
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.font = "30px Arial";
+	ctx.fillText("Hansi", 10, 50);	
 }
 	
 </script>
