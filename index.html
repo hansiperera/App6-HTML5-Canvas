@@ -44,8 +44,14 @@ function draw_b() {
   var b_context = b_canvas.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
+
+function draw_text(){
+	context.font = "bold 12px sans-serif";
+	context.fillText(Hansi);
+}
 	
 </script>
+	
 	
 <style>	
 .body {
@@ -86,7 +92,7 @@ function draw_b() {
 </canvas>
 	
 	<a onclick="draw_b();" class="w3-btn w3-black"> Draw Rectangle</a>
-	
+	<a onclick="draw_text();" class="w3-btn w3-black"> Type Name</a>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
