@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Hansi Perera
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,100 +17,97 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The purpose of this App is to create a canvas that we can later use to take a picture, then display the picture and analyze it. 
  
 Known Issues:
-blah, blah, blah, blah
+Hoping to have zero issues with the final product. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
-      <title>App6---HTML5-Canvas</title>  
+<head> 
+      <title>App6: HTML5-Canvas</title> <!--Introduces canvas-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+</head> 
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function draw_b() {
-  var b_canvas = document.getElementById("myCanvas");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
+function draw_b() { //function of the inserting of the shape. 
+  	var b_canvas = document.getElementById("myCanvas"); //identifies the canvas. 
+  	var b_context = b_canvas.getContext("2d"); //identifies the canvas.
+  	b_context.fillRect(50, 25, 150, 100); //coordinates and width and height for the rectangle
+	}
 
-function draw_text(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.font = "30px Arial";
-	ctx.fillText("Hansi", 150, 150);	
-}
+function draw_text(){ //function of the inserting the text that includes my name, "Hansi".
+	var c = document.getElementById("myCanvas"); //identifies the canvas.
+	var ctx = c.getContext("2d"); //identifies the canvas.
+	ctx.font = "30px Arial"; //instructions for the font which is Arial. 
+	ctx.fillText("Hansi", 150, 150); //the coordinates of the text
+	}
 	
 function insert_image(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	var img = document.getElementById("sun");
-	ctx.drawImage(img, 213, 5, 70, 70);
-}
-		      
+	var c = document.getElementById("myCanvas"); //identifies the canvas.
+	var ctx = c.getContext("2d"); //identifies the canvas.
+	var img = document.getElementById("sun"); //name of the image; sun.
+	ctx.drawImage(img, 213, 5, 70, 70); //coordinates and size of the image of the sun. 
+	}	      
 </script>
 	
 	
 <style>	
 .body {
-     margin: 0em;
-}
+     	margin: 0em;
+	}
 .page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-	
+    	width: 100vw;
+    	height: 100vh;
+    	position: fixed;
+	top: 0;
+    	left: -100vw;
+   	overflow-y: auto;
+    	z-index: 0;
+    	background-color: hsl(0,0%,100%);
+	}
+.page:target {
+    	left: 0vw;
+    	z-index: 1;
+	}
 </style>
 
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6: HTML5-Canvas</h1> <!--Introduces canvas--> 
 
 </div>		
-	
-	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>Click on each button to see some magic:)</p> <!--Little intro to get the audience hyped up to use my canvas-->
 		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--Disclaimer-->
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--Disclaimer-->
 
-<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> <!--Instructions for the canvas and the width and height and the border for it-->
 </canvas>
 	
 </div>
-	<a onclick="draw_b();" class="w3-btn w3-black"> Draw Rectangle</a>
+	<a onclick="draw_b();" class="w3-btn w3-black"> Draw Rectangle</a> <!--Button that says "Draw Rectangle". When the user presses it, a black rectangle shows up on the canvas-->
 </div>
-	<a onclick="draw_text();" class="w3-btn w3-black"> Type Name</a>
+	<a onclick="draw_text();" class="w3-btn w3-black"> Type Name</a> <!--Button that says "Type Name". When the user presses it, my name, "Hansi" shows up on the canvas-->
 </div>
-        <img id="sun" src="https://i.pinimg.com/originals/f5/22/7e/f5227e2d7ea8fcf9a3fd4b47bfdd720e.jpg" width="50" height="50"
-	<a onclick="insert_image();" class="w3-btn w3-black"> Insert Image</a>
+        <img id="sun" src="https://i.pinimg.com/originals/f5/22/7e/f5227e2d7ea8fcf9a3fd4b47bfdd720e.jpg" width="50" height="50" <!--Link that includes the image of the sun-->
+	<a onclick="insert_image();" class="w3-btn w3-black"> Insert Image</a> <!--Button that says "Insert Image". When the user presses it, the image of the sun shows up on the canvas-->
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY!</p> <!--Footer that contains the DIY writing-->
 </footer>
 
 </body>
