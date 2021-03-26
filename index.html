@@ -55,7 +55,8 @@ function draw_text(){ //function of the inserting the text that includes my name
 function insert_image(){
 	var c = document.getElementById("myCanvas"); //identifies the canvas.
 	var ctx = c.getContext("2d"); //identifies the canvas.
-	var img = document.getElementById("2021-03-26.png"); //name of the image; sun.
+	var img = new Image(); //name of the image; sun.
+	img.src = '2021-03-26.png';
 	ctx.drawImage(img, 213, 5, 70, 70); //coordinates and size of the image of the sun.
 	}	      
 	
