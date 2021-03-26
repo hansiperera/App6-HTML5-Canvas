@@ -52,6 +52,13 @@ function draw_text(){
 	ctx.fillText("Hansi", 150, 150);	
 }
 	
+function insert_image(){
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	var img = document.getElementById("sun");
+	ctx.drawImage(https://i.pinimg.com/originals/f5/22/7e/f5227e2d7ea8fcf9a3fd4b47bfdd720e.jpg, 10, 10);
+}
+		      
 </script>
 	
 	
@@ -97,6 +104,9 @@ function draw_text(){
 	<a onclick="draw_b();" class="w3-btn w3-black"> Draw Rectangle</a>
 </div>
 	<a onclick="draw_text();" class="w3-btn w3-black"> Type Name</a>
+</div>
+        <img id="sun" src="https://i.pinimg.com/originals/f5/22/7e/f5227e2d7ea8fcf9a3fd4b47bfdd720e.jpg" width="50" height="50"
+	<a onclick="insert_image();" class="w3-btn w3-black"> Insert Image</a>
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
