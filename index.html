@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The purpose of this App is to create a canvas that we can later use to take a picture, then display the picture and analyze it. 
  
 Known Issues:
-Hoping to have zero issues with the final product. 
+No known issues with the final output:) 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -55,8 +55,8 @@ function draw_text(){ //function of the inserting the text that includes my name
 function insert_image(){
 	var c = document.getElementById("myCanvas"); //identifies the canvas.
 	var ctx = c.getContext("2d"); //identifies the canvas.
-	var img = new Image(); //name of the image; sun.
-	img.src = '2021-03-26.png';
+	var img = new Image(); //the image of the sun.
+	img.src = '2021-03-26.png'; //file that has the image of the sun.
 	ctx.drawImage(img, 213, 5, 70, 70); //coordinates and size of the image of the sun.
 	}	      
 	
@@ -110,7 +110,7 @@ function clear_canvas(){
 </div>
 	<a onclick="insert_image();" class="w3-btn w3-black"> Insert Image</a> <!--Button that says "Insert Image". When the user presses it, the image of the sun shows up on the canvas-->
 </div>
-	<a onclick="clear_canvas();" class="w3-btn w3-black"> Clear Canvas</a>
+	<a onclick="clear_canvas();" class="w3-btn w3-black"> Clear Canvas</a> <!--Button that says "Clear Canvas". When the user presses it, whatever is on the canvas disappears-->
 </div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p> <!--Footer that contains the DIY writing-->
