@@ -58,6 +58,11 @@ function insert_image(){
 	var img = document.getElementById("sun"); //name of the image; sun.
 	ctx.drawImage(img, 213, 5, 70, 70); //coordinates and size of the image of the sun. 
 	}	      
+	
+function clear_canvas(){	
+	var b_canvas = document.getElementById("myCanvas");
+	b_canvas.width = b_canvas.width;
+	}
 </script>
 	
 	
@@ -105,7 +110,8 @@ function insert_image(){
         <img id="sun" src="https://i.pinimg.com/originals/f5/22/7e/f5227e2d7ea8fcf9a3fd4b47bfdd720e.jpg" width="50" height="50" <!--Link that includes the image of the sun-->
 	<a onclick="insert_image();" class="w3-btn w3-black"> Insert Image</a> <!--Button that says "Insert Image". When the user presses it, the image of the sun shows up on the canvas-->
 </div>
-
+	<a onclick="clear_canvas();" class="w3-btn w3-black"> Clear Canvas</a>
+</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p> <!--Footer that contains the DIY writing-->
 </footer>
